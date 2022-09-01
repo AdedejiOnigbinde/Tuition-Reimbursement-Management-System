@@ -1,0 +1,94 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>TRMS</div>
+  <div>
+    <span routerLink="/eformv">
+      Applications
+    </span>
+    <span (click)="logout()">
+      LogOut
+    </span>
+  </div>
+</mat-toolbar>
+
+<mat-grid-list cols="1" rowHeight="1:1">
+  <mat-grid-tile>
+    <div class="formwidth">
+      <h2 class="centertext">Apply For Reiembursements</h2>
+        <p>
+          <mat-form-field appearance="fill" class="fieldwidth">
+            <mat-label>Course Name</mat-label>
+            <input matInput type="text"  [(ngModel)]="courseName">
+          </mat-form-field>
+        
+
+        
+          <mat-form-field appearance="fill" class="fieldwidth">
+            <mat-label>Choose a date</mat-label>
+            <input matInput type="date"  [(ngModel)]="date">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="fill" class="fieldwidth">
+            <mat-label>Choose a Time</mat-label>
+            <input matInput type="time" step="1" [(ngModel)]="time">
+          </mat-form-field>
+        
+
+        
+          <mat-form-field appearance="fill" class="fieldwidth">
+            <mat-label>Location</mat-label>
+            <input matInput type="text"  [(ngModel)]="location">
+          </mat-form-field>
+        </p>
+
+        <p>
+        
+          <mat-form-field appearance="fill" class="fieldwidth">
+            <mat-label>Missed Work Time</mat-label>
+            <input matInput type="text"  [(ngModel)]="mWork">
+          </mat-form-field>
+
+        
+          <mat-form-field appearance="fill" class="fieldwidth">
+            <mat-label>Cost</mat-label>
+            <input matInput type="Number" [(ngModel)]="cost">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="fill" class="fieldwidth">
+            <mat-label>Grading</mat-label>
+            <input matInput type="text" [(ngModel)]="grade">
+          </mat-form-field>
+        
+      
+          <mat-form-field appearance="fill" class="fieldwidth">
+            <mat-label>Event Type</mat-label>
+            <mat-select  [(ngModel)]="eventTypes" (ngModelChange)="setAmount()">
+                <mat-option *ngFor="let type of eventType" [value]="type">
+                    {{type}}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="fill" class="fieldwidth">
+            <mat-label>Justification</mat-label>
+            <textarea matInput type="text" [(ngModel)]="justification"></textarea>
+          </mat-form-field>
+        
+          <mat-form-field appearance="fill" class="fieldwidth">
+            <mat-label>Desription</mat-label>
+            <textarea matInput type="text"  [(ngModel)]="description"></textarea>
+          </mat-form-field>
+        
+        </p>
+
+        <p class="centertext">
+          <button mat-raised-button color="primary" class="fieldwidth" (click)="create()">Submit</button>
+        </p>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

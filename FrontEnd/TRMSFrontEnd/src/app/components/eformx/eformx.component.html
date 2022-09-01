@@ -1,0 +1,108 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>TRMS</div>
+  <div>
+    <span routerLink="/edash">
+      Home
+    </span>
+    <span routerLink="/eformv">
+      Applications
+    </span>
+    <span (click)="logout()">
+      LogOut
+    </span>
+  </div>
+</mat-toolbar>
+
+
+<mat-grid-list cols="2">
+  <mat-grid-tile>
+    <div>
+      <h1 class="center">Form Information</h1>
+      <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Course Name</mat-label>
+        <input matInput disabled value={{formValue.name}}>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Start Date</mat-label>
+        <input matInput disabled value={{formValue.date}}>
+      </mat-form-field>
+    </p>
+
+      <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Time</mat-label>
+        <input matInput disabled value={{formValue.time}}>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Location</mat-label>
+        <input matInput disabled value={{formValue.location}}>
+      </mat-form-field>
+    </p>
+
+      <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <input matInput disabled value={{formValue.description}}>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Cost</mat-label>
+        <input matInput disabled value={{formValue.cost}}>
+      </mat-form-field>
+    </p>
+
+      <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Grading</mat-label>
+        <input matInput disabled value={{formValue.grade}}>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Event Type</mat-label>
+        <input matInput disabled value={{formValue.eventType}}>
+      </mat-form-field>
+    </p>
+
+      <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Justification</mat-label>
+        <input matInput disabled value={{formValue.justification}}>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Missed Work Time</mat-label>
+        <input matInput disabled value={{formValue.mTime}}>
+      </mat-form-field>
+    </p>
+
+      <p class="center">
+      <mat-form-field appearance="fill">
+        <mat-label>Reimbursement Amount</mat-label>
+        <input matInput disabled value={{formValue.rAmount}}>
+      </mat-form-field>
+    </p>
+      <p class="center" *ngIf="formValue.cFApproval === true">
+        <button mat-raised-button color="primary" class="space" (click)="createreburse()">Accept</button>
+        <button mat-raised-button color="warn" class="space" (click)="rejection()">Decline</button>
+      </p>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div *ngIf="formValue.cApproval === true">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Grade</mat-label>
+        <input matInput [(ngModel)]="grade">
+      </mat-form-field>
+      <p class="center">
+        <button mat-raised-button color="primary" (click)="submitGrade()">Submit</button>
+      </p>
+  
+    </div>
+   
+
+  </mat-grid-tile>
+
+</mat-grid-list>

@@ -1,0 +1,15 @@
+.navbar {
+  justify-content: space-between;
+}
+
+span {
+  padding-right: 1rem;
+}
+
+.center{
+  text-align: center
+}
+
+.space{
+  margin-right: 1rem;
+}

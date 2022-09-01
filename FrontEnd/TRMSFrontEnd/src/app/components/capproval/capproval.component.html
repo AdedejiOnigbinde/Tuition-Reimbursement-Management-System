@@ -1,0 +1,73 @@
+<mat-toolbar color="primary" class="navbar">
+    <div>TRMS</div>
+</mat-toolbar>
+
+<div class="center">
+    <h1>Approve Or Reject</h1>
+    <p>
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Course Name</mat-label>
+            <input matInput disabled value={{formValue.name}}>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Start Date</mat-label>
+            <input matInput disabled value={{formValue.date}}>
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Time</mat-label>
+            <input matInput disabled value={{formValue.time}}>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Location</mat-label>
+            <input matInput disabled value={{formValue.location}}>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Description</mat-label>
+            <input matInput disabled value={{formValue.description}}>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Cost</mat-label>
+            <input matInput disabled value={{formValue.cost}}>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Grading</mat-label>
+            <input matInput disabled value={{formValue.grade}}>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Event Type</mat-label>
+            <input matInput disabled value={{formValue.eventType}}>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Justification</mat-label>
+            <input matInput disabled value={{formValue.justification}}>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Missed Work Time</mat-label>
+            <input matInput disabled value={{formValue.mTime}}>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill" class="space">
+            <mat-label>Reimbursement Amount</mat-label>
+            <input matInput disabled value={{formValue.rAmount}}>
+        </mat-form-field>
+    </p>
+    <p>
+        <button mat-raised-button color="primary" class="buttonspace" (click)="setApproval()">Accept</button>
+        <button mat-raised-button color="warn" class="buttonspace" (click)="rejection()">Decline</button>
+    </p>
+</div>

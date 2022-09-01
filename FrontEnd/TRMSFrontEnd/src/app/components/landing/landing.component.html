@@ -1,0 +1,46 @@
+<mat-grid-list cols="2">
+    <mat-grid-tile class="left-background">
+        <div>
+            <h1>
+                TRMS Paying For A Brighter Future
+            </h1>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="form-width">
+            <h2 class="center-text">Welcome Back</h2>
+            <p>
+                <mat-form-field appearance="fill" class="form-field-width">
+                    <mat-label>UserName</mat-label>
+                    <input matInput type="text" [(ngModel)]="userName">
+                </mat-form-field>
+            </p>
+    
+            <p>
+                <mat-form-field appearance="fill" class="form-field-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password"  [(ngModel)]="password">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill" class="form-field-width">
+                    <mat-label>Employee Type</mat-label>
+                    <mat-select  [(ngModel)]="employeeTypes">
+                        <mat-option *ngFor="let type of employeeType" [value]="type">
+                            {{type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+            <p>
+                <button mat-raised-button color="primary" class="form-field-width" (click)="login2()">Login</button>
+            </p>
+    
+    
+    
+            <h4 routerLink="/register" class="center-text">Dont Have An Account? Register</h4>
+        </div>
+   
+    </mat-grid-tile>
+
+</mat-grid-list>

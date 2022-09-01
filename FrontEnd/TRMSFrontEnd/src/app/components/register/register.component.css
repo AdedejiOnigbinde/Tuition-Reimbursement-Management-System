@@ -1,0 +1,17 @@
+.left-background{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../pexels-cottonbro-3943741.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-width{
+   width: 70%;
+}
+
+.form-field-width{
+    width: 100%;
+}
+
+.center-text{
+    text-align: center;
+}

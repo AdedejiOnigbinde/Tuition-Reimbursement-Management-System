@@ -1,0 +1,14 @@
+.center{
+    width:100%;
+    text-align: center;
+}
+
+.space{
+padding-right: 1rem;
+width: 30%;
+}
+
+.buttonspace{
+    margin-right: 1rem;
+    width: 30%;
+}
